@@ -9,3 +9,4 @@ W poszczególnych folderach przechowywane są projekty wykonane w ramach zajęć
 3. PrimeFaces (26.03) - folder [PrimeFacesLab](./PrimeFacesLab)
 4. JSF + EJB + JPA + CDI + BV (09.04) - folder [Requests](./Requests)
 5. Message-Driven Beans (16.04) - folder [MDBLab](./MDBLab)
+6. Spring (23.04) - folder [bookings](./bookings)
