@@ -10,3 +10,4 @@ W poszczególnych folderach przechowywane są projekty wykonane w ramach zajęć
 4. JSF + EJB + JPA + CDI + BV (09.04) - folder [Requests](./Requests)
 5. Message-Driven Beans (16.04) - folder [MDBLab](./MDBLab)
 6. Spring (23.04) - folder [bookings](./bookings)
+7. Web Services (REST): JAX-RS (30.04) - folder [JAX-RS](./JAX-RS)
