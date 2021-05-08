@@ -11,3 +11,4 @@ W poszczególnych folderach przechowywane są projekty wykonane w ramach zajęć
 5. Message-Driven Beans (16.04) - folder [MDBLab](./MDBLab)
 6. Spring (23.04) - folder [bookings](./bookings)
 7. Web Services (REST): JAX-RS (30.04) - folder [JAX-RS](./JAX-RS)
+8. ASP.NET MVC + Entity Framework (Code First) (07.05) - folder [MvcNews](./MvcNews)
