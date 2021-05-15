@@ -12,3 +12,4 @@ W poszczególnych folderach przechowywane są projekty wykonane w ramach zajęć
 6. Spring (23.04) - folder [bookings](./bookings)
 7. Web Services (REST): JAX-RS (30.04) - folder [JAX-RS](./JAX-RS)
 8. ASP.NET MVC + Entity Framework (Code First) (07.05) - folder [MvcNews](./MvcNews)
+9. Web Services (REST): ASP.NET Web API (14.05) - folder [CompanyApi](./CompanyApi)
