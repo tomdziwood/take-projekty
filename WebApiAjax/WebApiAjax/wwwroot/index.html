@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#calc-jQuery").click(function () {
+                var x = $("#x").val();
+                var y = $("#y").val();
+
+                $.ajax({
+                    url: "/api/math",
+                    data: {
+                        x: x,
+                        y: y
+                    },
+                    success: (response) => {
+                        $("#sum").html(response.sum);
+                        $("#difference").html(response.difference);
+                        $("#product").html(response.product);
+                        $("#quotient").html(response.quotient);
+                    },
+                    error: (response) => {
+                        console.log("Error!!!")
+                        console.log(response);
+
+                        $("#sum").html("error");
+                        $("#difference").html("error");
+                        $("#product").html("error");
+                        $("#quotient").html("error");
+                    }
+                });
+            });
+        });
+
+        function vanillaJSfunction() {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+
+            var xhr = new XMLHttpRequest();
+            var urlString = "/api/math?x=" + x + "&y=" + y;
+            xhr.open("GET", urlString);
+
+            xhr.setRequestHeader("Accept", "application/json");
+
+            xhr.onload = () => {
+                var response = JSON.parse(xhr.response);
+
+                if (xhr.status == 200) {
+                    document.getElementById("sum").innerHTML = response.sum;
+                    document.getElementById("difference").innerHTML = response.difference;
+                    document.getElementById("product").innerHTML = response.product;
+                    document.getElementById("quotient").innerHTML = response.quotient;
+                } else {
+                    console.log("Error! Status: " + xhr.status);
+                    console.log(response);
+
+                    document.getElementById("sum").innerHTML = "error";
+                    document.getElementById("difference").innerHTML = "error";
+                    document.getElementById("product").innerHTML = "error";
+                    document.getElementById("quotient").innerHTML = "error";
+                }
+            }
+
+            xhr.send(null);
+        }
+    </script>
+    <div>
+        <h1>Calculations</h1>
+        <form>
+            x = <input type="text" id="x" />
+            y = <input type="text" id="y" />
+            <input type="button" id="calc-jQuery" value="Call API (jQuery)" />
+            <input type="button" id="calc-vanillaJS" value="Call API (vanilla JS)" onclick="vanillaJSfunction()" />
+        </form>
+        x + y = <span id="sum"></span><br />
+        x - y = <span id="difference"></span><br />
+        x * y = <span id="product"></span><br />
+        x / y = <span id="quotient"></span><br />
+    </div>
+</body>
+</html>
