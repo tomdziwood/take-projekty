@@ -14,3 +14,4 @@ W poszczególnych folderach przechowywane są projekty wykonane w ramach zajęć
 8.  ASP.NET MVC + Entity Framework (Code First) (07.05) - folder [MvcNews](./MvcNews)
 9.  Web Services (REST): ASP.NET Web API (14.05) - folder [CompanyApi](./CompanyApi)
 10. ASP.NET Web API, Ajax (21.05) - folder [WebApiAjax](./WebApiAjax)
+11./12. Aplikacja SPA: Angular + .NET Core Web API (28.05 + 11.06) - folder [StudentsApi](./StudentsApi), [StudentsFront](./StudentsFront)
